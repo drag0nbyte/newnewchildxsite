@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DG90RCZPBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DG90RCZPBB');
+</script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6015333898236670"
+     crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body>
+    <h1>Key Begin:</h1>
+    <p id="password">Generate a new key</p>
+    <script>
+      var password = document.getElementById("password");
+
+      function genPassword() {
+        var chars =
+          "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var passwordLength = 24; // 24 + (8) + 14
+        var passwordLength2 = 14;
+        var password = "";
+        for (var i = 0; i <= passwordLength; i++) {
+          var randomNumber = Math.floor(Math.random() * chars.length);
+          password += chars.substring(randomNumber, randomNumber + 1);
+        }
+        password += "nx2hs0n0";
+        for (var i = 0; i <= passwordLength2; i++) {
+          var randomNumber = Math.floor(Math.random() * chars.length);
+          password += chars.substring(randomNumber, randomNumber + 1);
+        }
+
+        var doc = document.getElementById("password");
+        doc.innerText = password;
+      }
+    </script>
+    <button
+      class="g-recaptcha"
+      data-sitekey="6LfmMzsjAAAAALArnGmc9jjBEyi-GngYFlpy35l8"
+      data-callback="genPassword"
+      data-action="Generate"
+    >
+      Generate
+    </button>
+  </body>
+</html>
